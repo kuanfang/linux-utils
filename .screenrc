@@ -19,6 +19,8 @@ caption always "%{= gg}%{+b W}%n %t %h %=%l %H %c"
 hardstatus alwayslastline "%-Lw%{= Gk}%50>%n%f* %t%{-}%+Lw%<"
 #
 activity "Activity in %t(%n)"
+# ressetting TERM after using vim and less
+altscreen on
 #
 shelltitle "shell"
 shell -$SHELL
