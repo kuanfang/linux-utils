@@ -5,6 +5,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set hlsearch
+set ruler
 nohl
 map <F7> :tabp <Enter>
 map <F8> :tabn <Enter>
