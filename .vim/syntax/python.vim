@@ -163,6 +163,7 @@ syn keyword pythonOperator      and in is not or
 
 syn match pythonStatement   "\<yield\>" display
 syn match pythonImport      "\<from\>" display
+syn match OperatorChars "?\|+\|-\|\*\|/\|&\||\|!\|\~\|%\|=\|@!"
 
 if s:Python2Syntax()
   if !s:Enabled("g:python_print_as_function")
@@ -396,7 +397,7 @@ syn match   pythonFloat		"\<\d\+\.\d*\%([eE][+-]\=\d\+\)\=[jJ]\=" display
 
 if s:Enabled("g:python_highlight_builtin_objs")
   if s:Python2Syntax()
-    syn keyword pythonNone	        None
+    syn keyword pythonBuiltinObj	None
     syn keyword pythonBoolean		True False
   endif
   syn keyword pythonBuiltinObj	Ellipsis NotImplemented
@@ -499,6 +500,7 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonRepeat           Repeat
   HiLink pythonException        Exception
   HiLink pythonOperator         Operator
+  HiLink OperatorChars          Operator
 
   HiLink pythonDecorator        Define
   HiLink pythonDottedName       Function
@@ -555,7 +557,7 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonBoolean          Boolean
   HiLink pythonNone             Constant
 
-  HiLink pythonBuiltinObj       Structure
+  HiLink PYTHONbUiltinObj       Structure
   HiLink pythonBuiltinFunc      Function
 
   HiLink pythonExClass          Structure
