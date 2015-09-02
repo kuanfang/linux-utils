@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/kuanfang/Projects/caffe/models/bvlc_reference_caffenet'
+let g:netrw_dirhist_2='/Users/kuanfang/Projects/unix-utils'
+let g:netrw_dirhist_3='/Users/kuanfang/Downloads/x/1'
