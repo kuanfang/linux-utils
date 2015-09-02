@@ -43,16 +43,16 @@ hi IncSearch    guifg=#000000 ctermfg=16   guibg=#CDCDFD ctermbg=189  gui=ITALIC
 hi Search       guifg=#000000 ctermfg=16   guibg=#CDCDFD ctermbg=189  gui=ITALIC cterm=NONE
 hi Ignore       guifg=#808080 ctermfg=244  gui=NONE cterm=NONE
 hi Identifier   guifg=#0086B3 ctermfg=31   gui=NONE cterm=NONE
-hi PreProc      guifg=#A0A0A0 ctermfg=89   gui=NONE cterm=NONE
+hi PreProc      guifg=#A0A0A0 ctermfg=89   gui=BOLD cterm=BOLD
 hi Comment      guifg=#AAAAAA ctermfg=248  gui=ITALIC cterm=NONE
-hi Constant     guifg=#177F80 ctermfg=30   gui=NONE cterm=NONE
-hi String       guifg=#005FAF ctermfg=25   gui=NONE cterm=NONE
+hi Constant     guifg=#0087AF ctermfg=31   gui=NONE cterm=NONE
+hi String       guifg=#005FAF ctermfg=19   gui=NONE cterm=NONE
 hi Entity       guifg=#875faf ctermfg=97   gui=NONE cterm=NONE
-hi Statement    guifg=#870000 ctermfg=89   gui=NONE cterm=NONE
+hi Statement    guifg=#870000 ctermfg=89   gui=BOLD cterm=BOLD
 hi Type         guifg=#445588 ctermfg=60   gui=NONE cterm=NONE
 hi Todo         guifg=#FFFFFF ctermfg=231  guibg=#990000 ctermbg=88   gui=BOLD cterm=BOLD
 hi Special      guifg=#159828 ctermfg=28   gui=BOLD cterm=BOLD
-hi rubySymbol   guifg=#960B73 ctermfg=89   gui=NONE cterm=NONE
+hi rubySymbol   guifg=#960B73 ctermfg=89   gui=BOLD cterm=BOLD
 hi Error        guifg=#F8F8FF ctermfg=231  guibg=#FF1100 ctermbg=196  gui=NONE cterm=NONE
 hi Label        guifg=#000000 ctermfg=21   gui=NONE cterm=NONE
 hi Structure    guifg=#ff0000 ctermfg=16   gui=NONE cterm=NONE
@@ -83,6 +83,7 @@ hi link Float           Number
 hi link Conditional     Statement
 hi link StorageClass    Statement
 hi link Operator        Statement
+hi link Repeat          Statement
 hi link Statement       Statement
 
 hi link rubyStringDelimiter String
