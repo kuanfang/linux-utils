@@ -46,7 +46,7 @@ hi Identifier   guifg=#0086B3 ctermfg=31   gui=NONE cterm=NONE
 hi PreProc      guifg=#A0A0A0 ctermfg=89   gui=NONE cterm=NONE
 hi Comment      guifg=#AAAAAA ctermfg=248  gui=ITALIC cterm=NONE
 hi Constant     guifg=#177F80 ctermfg=30   gui=NONE cterm=NONE
-hi String       guifg=#00005F ctermfg=25   gui=NONE cterm=NONE
+hi String       guifg=#005FAF ctermfg=25   gui=NONE cterm=NONE
 hi Entity       guifg=#875faf ctermfg=97   gui=NONE cterm=NONE
 hi Statement    guifg=#870000 ctermfg=89   gui=NONE cterm=NONE
 hi Type         guifg=#445588 ctermfg=60   gui=NONE cterm=NONE
