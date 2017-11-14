@@ -5,7 +5,7 @@ cp .vimrc ~
 cp -r .vim ~
 ```
 
-2. Install [VundleVim](https://github.com/VundleVim/Vundle.vim#quick-start)):
+2. Install [VundleVim](https://github.com/VundleVim/Vundle.vim#quick-start):
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
