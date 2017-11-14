@@ -5,7 +5,7 @@ cp .vimrc ~
 cp -r .vim ~
 ```
 
-2. Install VundleVim (see [instructions](https://github.com/VundleVim/Vundle.vim#quick-start)):
+2. Install [VundleVim](https://github.com/VundleVim/Vundle.vim#quick-start)):
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
@@ -16,7 +16,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 :PluginUpdate
 ```
 
-4. (Optinal) Install [solarized colorscheme](https://github.com/altercation/vim-colors-solarized) for Vim:
+4. (Optinal) Install [Solarized Colorscheme](https://github.com/altercation/vim-colors-solarized) for Vim:
 ```
 git clone git@github.com:altercation/vim-colors-solarized.git
 cd vim-colors-solarized/colors

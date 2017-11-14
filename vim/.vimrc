@@ -91,7 +91,7 @@ set nobackup nowritebackup noswapfile autoread            " no backup or swap
 set hlsearch incsearch ignorecase smartcase               " search
 set wildmenu                                              " completion
 set backspace=indent,eol,start                            " sane backspace
-set clipboard=unnamedplus                        " use the system clipboard for yank/put/delete
+set clipboard=unnamedplus,unnamed                         " use the system clipboard for yank/put/delete
 set mouse=a                                               " enable mouse for all modes settings
 set nomousehide                                           " don't hide the mouse cursor while typing
 set mousemodel=popup                                      " right-click pops up context menu
@@ -119,10 +119,10 @@ noremap! <s-insert> <middlemouse>
 "                                  Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
-set background=dark
+set t_Co=256
 let g:solarized_termcolors=256
+set background=dark
 colorscheme solarized
-set t_co=256
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Formatting
