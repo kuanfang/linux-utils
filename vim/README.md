@@ -22,3 +22,8 @@ git clone git@github.com:altercation/vim-colors-solarized.git
 cd vim-colors-solarized/colors
 mv solarized.vim ~/.vim/colors/
 ```
+
+5. (Optinal) If the clipboard is not working well, try install vim-gtk:
+```
+sudo apt-get install vim-gtk
+```
