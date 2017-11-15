@@ -54,7 +54,7 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
-" 
+"
 let g:NERDTreeMapOpenInTab='<ENTER>'
 
 
@@ -63,7 +63,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = "--max-line-length=80" 
+let g:syntastic_python_flake8_args = "--max-line-length=80"
 
 
 augroup autoformat_settings
@@ -139,8 +139,8 @@ autocmd FileType make setlocal noexpandtab
 highlight OverLength ctermbg=8
 match OverLength /\%81v.\+/
 
-" Remove trailing white spaces.
-:%s/\s\+$//e
+" Automatically remove trailing white spaces.
+autocmd BufWritePre * %s/\s\+$//e
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   Mappings
