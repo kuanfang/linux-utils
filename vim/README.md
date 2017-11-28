@@ -10,20 +10,27 @@ cp -r .vim ~
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-3. Install and update the configured plugins within vim:
+3. Install and update the configured plugins **in vim**:
 ```
-:PluginInstall
+:PluginClean
 :PluginUpdate
 ```
 
-4. (Optinal) Install [Solarized Colorscheme](https://github.com/altercation/vim-colors-solarized) for Vim:
+4. Install [flake8](https://github.com/SublimeLinter/SublimeLinter-flake8) as the Python coding style checker:
 ```
-git clone git@github.com:altercation/vim-colors-solarized.git
-cd vim-colors-solarized/colors
-mv solarized.vim ~/.vim/colors/
+# For python2
+sudo pip install flake8
+
+# For python 3
+sudo pip3 install flake8
 ```
 
-5. (Optinal) If the clipboard is not working well, try install vim-gtk:
+5. Install [Solarized Colorscheme](https://github.com/altercation/vim-colors-solarized):
+```
+git clone git@github.com:altercation/vim-colors-solarized.git ~/.vim/colors/
+```
+
+6. (Optinal) If the clipboard is not working well, try install vim-gtk:
 ```
 sudo apt-get install vim-gtk
 ```
