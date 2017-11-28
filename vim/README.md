@@ -27,7 +27,8 @@ sudo pip3 install flake8
 
 5. Install [Solarized Colorscheme](https://github.com/altercation/vim-colors-solarized):
 ```
-git clone git@github.com:altercation/vim-colors-solarized.git ~/.vim/colors/
+git clone git@github.com:altercation/vim-colors-solarized.git
+cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 ```
 
 6. (Optinal) If the clipboard is not working well, try install vim-gtk:
