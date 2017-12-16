@@ -10,7 +10,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
 
@@ -27,6 +26,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-glaive'
 Plugin 'google/vim-codefmt'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 "
@@ -55,14 +55,19 @@ let g:NERDCustomDelimiters = { 'python': { 'left': '#'} }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
-"
+" 
 let g:NERDTreeMapOpenInTab='<ENTER>'
 
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_quiet_messages = {'!level':  'errors'}
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args = "--max-line-length=80"
 
@@ -122,9 +127,8 @@ noremap! <s-insert> <middlemouse>
 "                                  Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
-set t_Co=256
-let g:solarized_termcolors=256
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -140,12 +144,9 @@ autocmd FileType make setlocal noexpandtab
 highlight OverLength ctermbg=8
 match OverLength /\%81v.\+/
 
-" Automatically remove trailing white spaces.
-autocmd BufWritePre * %s/\s\+$//e
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-h> :tabp <Enter>
-map <c-l> :tabn <Enter>
+map <C-l> :tabn <Enter>
 map <C-n> :NERDTreeTabsToggle<CR>
