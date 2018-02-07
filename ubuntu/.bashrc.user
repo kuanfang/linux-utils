@@ -19,13 +19,38 @@ if ! shopt -oq posix; then
 fi
 
 ################################################################################
+# Path.
+################################################################################
 # CUDA
 export CUDA_HOME=/usr/local/cuda
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
 export PATH=${CUDA_HOME}/bin:$PATH
 
-export TERM=xterm-256color
+# export TERM=xterm-255color
 
+################################################################################
+# Terminal.
+################################################################################
+# Add git branch if its present to PS1.
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+# export PS1=""
+export PS1="\u@\h:\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]$ "
+
+################################################################################
+# Bash commands (general).
+################################################################################
+# Vim in screen.
+if [ -n $TMUX ]; then
+   alias vim="TERM=screen-256color vim"
+fi
+
+# Ipython notebook
+alias jupyter_notebook='jupyter notebook --no-browser --ip=* --port=8888'
+
+################################################################################
+# Bash commands (Stanford).
 ################################################################################
 # Town portal.
 alias tp='cd /cvgl2/u/kuanfang/'
@@ -33,15 +58,13 @@ alias tp='cd /cvgl2/u/kuanfang/'
 # Hearthstone.
 alias hs='cd /capri16/kuanfang/'
 
-# Hearthstone.
-alias pyv_bullet='source /cvgl2/u/kuanfang/.pyv/bullet/bin/activate'
-
-# Ipython notebook
-# alias ipython_notebook='ipython notebook --no-browser --ip=* --port=8888'
+# Python virtual environments..
+alias pyvgpu='source /cvgl2/u/kuanfang/.pyv/bullet/bin/activate'
+alias pyvcpu='source /cvgl2/u/kuanfang/.pyv/cpu_bullet/bin/activate'
 
 ################################################################################
-# Add git branch if its present to PS1.
-parse_git_branch() {
- git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-export PS1="\u@\h:\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]$ "
+# Bash commands (Google Cloud).
+################################################################################
+# Google Cloud.
+alias gssh='ssh -i ~/.ssh/google_cloud'
+alias gscp='scp -i ~/.ssh/google_cloud'

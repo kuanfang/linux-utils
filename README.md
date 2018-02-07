@@ -1,2 +1,2 @@
-linux-utils
+Linux Utilities
 ==========
