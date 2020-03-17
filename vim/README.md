@@ -25,13 +25,21 @@ sudo pip install flake8
 sudo pip3 install flake8
 ```
 
-5. Install [Solarized Colorscheme](https://github.com/altercation/vim-colors-solarized):
+5. Install [Solarized Colorscheme](https://github.com/aruhier/gnome-terminal-colors-solarized):
+```
+sudo apt-get install dconf-cli
+git clone https://github.com/aruhier/gnome-terminal-colors-solarized.git
+cd gnome-terminal-colors-solarized
+./install.sh
+```
+
+6. Install [Solarized Colorscheme for Vim](https://github.com/aruhier/gnome-terminal-colors-solarized):
 ```
 git clone git@github.com:altercation/vim-colors-solarized.git
 cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 ```
 
-6. (Optinal) If the clipboard is not working well, try install vim-gtk:
+7. (Optinal) If the clipboard is not working well, try install vim-gtk:
 ```
 sudo apt-get install vim-gtk
 ```
