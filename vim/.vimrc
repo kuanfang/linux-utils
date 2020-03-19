@@ -16,7 +16,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -24,6 +23,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-glaive'
 Plugin 'google/vim-codefmt'
+
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -36,7 +38,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -56,11 +57,9 @@ let g:NERDTrimTrailingWhitespace = 1
 " 
 let g:NERDTreeMapOpenInTab='<ENTER>'
 
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -70,9 +69,10 @@ let g:syntastic_quiet_messages = {'!level':  'errors'}
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args = "--max-line-length=80"
 
-
 let g:airline_extensions = []
 
+let g:python_pep8_indent_hang_closing = 1
+let g:pymode_indent = 0
 
 augroup autoformat_settings
   autocmd FileType bzl AutoFormatBuffer buildifier
@@ -85,7 +85,6 @@ augroup autoformat_settings
   autocmd FileType python AutoFormatBuffer yapf
   " Alternative: autocmd FileType python AutoFormatBuffer autopep8
 augroup END
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Vim Behavior
