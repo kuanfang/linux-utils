@@ -8,7 +8,7 @@ Normal/Visual Mode:
 - `Ctrl-n`: Open the [NerdTree](https://github.com/preservim/nerdtree) explorer.
 - `\-c-Space`: Toggle the comment of the current line or multiple lines using [NERD Commenter](https://github.com/preservim/nerdcommenter).
 - `:SyntasticToggleMode`: Temporally toggle the automatic check of [Syntastic](https://github.com/vim-syntastic/syntastic). 
-- `:FormatCode`: Automatically formatting the code using [vim-codefmt](https://github.com/google/vim-codefmt)
+- `:FormatCode`: Automatically formatting the code using [vim-codefmt](https://github.com/google/vim-codefmt).
 
 Insert Mode:
 - `Ctrl-p`: Finds the previous matching completion for the partially typed word. 
